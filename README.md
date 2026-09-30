@@ -78,6 +78,8 @@ Snowflake serves as the central analytical data warehouse.
 
 The project separates raw/source data from transformed analytical models, allowing the transformation layer to be managed independently from the underlying source data.
 
+![Snowflake Data Warehouse](docs/images/Zomato_Snowflake _dataWH.png)
+
 ---
 
 ## dbt
