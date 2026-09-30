@@ -79,13 +79,14 @@ Snowflake serves as the central analytical data warehouse.
 The project separates raw/source data from transformed analytical models, allowing the transformation layer to be managed independently from the underlying source data.
 
 ![Snowflake Data Warehouse](docs/images/Zomato_Snowflake_dataWH.png)
->>>>>>> Stashed changes
 
 ---
 
 ## dbt
 
 dbt is used to build the transformation and modelling layer.
+
+![dbt Lineage](docs/images/Zomato_dbt_linage_graph.png)
 
 ### Staging Models
 
@@ -136,6 +137,8 @@ The project includes a `zomato_batch` DAG responsible for coordinating pipeline 
 
 The orchestration layer separates individual pipeline activities and their dependencies from the transformation logic implemented in dbt.
 
+![Airflow DAG](docs/images/zomato_batch_graph_Airflow.png)
+
 ---
 
 # AI Engineering
@@ -145,6 +148,8 @@ The project extends the traditional data platform with an AI layer.
 ## Natural Language to SQL
 
 The Text-to-SQL application allows users to ask questions about the analytical data using natural language.
+
+![AI Text-to-SQL](docs/images/Zomato_ai_chat.png)
 
 For example:
 
