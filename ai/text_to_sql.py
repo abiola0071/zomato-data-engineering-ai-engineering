@@ -29,7 +29,7 @@ Tables available (Snowflake). Use bare table names, no database or schema prefix
 FCT_ORDERS(order_id, order_date, customer_id, restaurant_id, city, cuisine,
            payment_method, order_status, is_delivered, sales_amount, discount,
            delivery_fee, gst, customer_rating, delivery_time_min)
-DIM_RESTAURANT(restaurant_id, restaurant_name, city, cuisine, rating, cost_for_two)
+DIM_RESTAURANTS(restaurant_id, restaurant_name, city, cuisine, rating, cost_for_two)
 DIM_CUSTOMER(customer_id, customer_name, age, age_segment, gender, city)
 MART_DAILY_CITY_REVENUNE(
     order_date,
