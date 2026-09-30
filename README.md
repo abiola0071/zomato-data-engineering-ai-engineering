@@ -260,8 +260,6 @@ DBT_PRIVATE_KEY_PASSPHRASE
 OPENAI_API_KEY
 ```
 
-**Never commit `.env` files, API keys, passwords, or private keys to GitHub.**
-
 ---
 
 ## dbt
@@ -337,10 +335,10 @@ This keeps credentials, private keys, large source datasets, and generated files
 The objective of this project is to demonstrate an end-to-end approach to building a modern data and AI platform:
 
 ```text
-                 DATA
+                AWS DATA
                    │
                    ▼
-              SNOWFLAKE
+               SNOWFLAKE
                    │
                    ▼
                   DBT
