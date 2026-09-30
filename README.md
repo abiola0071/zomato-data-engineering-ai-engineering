@@ -147,7 +147,7 @@ The project extends the traditional data platform with an AI layer.
 
 ## Natural Language to SQL
 
-The Text-to-SQL application allows users to ask questions about the analytical data using natural language.
+The project integrates the OpenAI API to enable natural-language querying of the Snowflake data warehouse.
 
 ![AI Text-to-SQL](docs/images/Zomato_ai_chat.png)
 
@@ -157,9 +157,22 @@ For example:
 What are the top 10 cities by GMV?
 ```
 
-The application converts the natural-language request into SQL and executes the query against Snowflake.
+The Text-to-SQL workflow then:
 
-This provides a conversational interface for exploring analytical data without requiring users to manually write SQL.
+1. Accepts the user's natural-language question through the Streamlit interface.
+2. Sends the question and relevant Snowflake schema context to the OpenAI API.
+3. Uses the OpenAI model to generate the corresponding SQL query.
+4. Validates the generated query to prevent unsupported or destructive SQL operations.
+5. Executes the generated SELECT query against Snowflake.
+6. Returns the query results to the user through the Streamlit interface.
+
+Flow:
+
+User Question → Streamlit → OpenAI API → SQL Generation → SQL Validation → Snowflake → Results
+
+This provides a natural-language interface to the analytical data marts, allowing users to explore business data without manually writing SQL.
+
+The implementation uses the OpenAI API as the intelligence layer while Snowflake remains the source of truth for the analytical data.
 
 ---
 
